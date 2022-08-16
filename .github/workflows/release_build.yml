@@ -774,7 +774,7 @@ jobs:
             -F vscode-extension-kogito-bundle...
             -F vscode-extension-red-hat-business-automation-bundle...
             -F vscode-extension-serverless-workflow-editor...
-            -F vscode-extension-kie-ba-bundle...
+            -F vscode-extension-ibm-bamoe-bundle...
 
       - name: "Build"
         run: |
@@ -824,15 +824,15 @@ jobs:
           asset_name: vscode_extension_kogito_bundle_${{ inputs.tag }}.vsix
           asset_content_type: application/zip
 
-      - name: "Upload VS Code Extension - KIE Business Automation Bundle (prod)"
+      - name: "Upload VS Code Extension - IBM Business Automation Manager Open Edition Bundle (prod)"
         if: ${{ !inputs.dry_run }}
         uses: actions/upload-release-asset@v1.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.gh_token }}
         with:
           upload_url: ${{ inputs.upload_asset_url }}
-          asset_path: ./packages/vscode-extension-kie-ba-bundle/dist/vscode_extension_kie_ba_bundle_${{ inputs.tag }}.vsix
-          asset_name: vscode_extension_kie_ba_bundle_${{ inputs.tag }}.vsix
+          asset_path: ./packages/vscode-extension-ibm-bamoe-bundle/dist/vscode_extension_ibm_bamoe_bundle_${{ inputs.tag }}.vsix
+          asset_name: vscode_extension_ibm_bamoe_bundle_${{ inputs.tag }}.vsix
           asset_content_type: application/zip
 
       - name: "Upload VS Code Extension - Red Hat Business Automation Bundle (prod)"

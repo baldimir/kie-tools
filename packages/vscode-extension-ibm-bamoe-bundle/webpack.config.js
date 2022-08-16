@@ -4,7 +4,7 @@ const common = require("@kie-tools-core/webpack-base/webpack.common.config");
 module.exports = async (env) => [
   merge(common(env), {
     output: {
-      library: "VsCodeExtensionKieBaBundle",
+      library: "VsCodeExtensionIbmBamoeBundle",
       libraryTarget: "umd",
       umdNamedDefine: true,
     },
