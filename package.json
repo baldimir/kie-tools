@@ -44,6 +44,11 @@
     "superagent": "10.2.2"
   },
   "pnpm": {
+    "overrides": {
+      "expr-eval": "npm:expr-eval-fork@3.0.0",
+      "json-refs>js-yaml": "^3.14.2",
+      "xmlbuilder2>js-yaml": "^3.14.2"
+    },
     "packageExtensions": {
       "monaco-editor-webpack-plugin": {
         "peerDependencies": {
