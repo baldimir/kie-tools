@@ -7298,9 +7298,6 @@ importers:
       copy-webpack-plugin:
         specifier: ^11.0.0
         version: 11.0.0(webpack@5.104.1)
-      html-replace-webpack-plugin:
-        specifier: ^2.6.0
-        version: 2.6.0
       html-webpack-plugin:
         specifier: ^5.3.2
         version: 5.6.4(webpack@5.104.1)
@@ -8054,7 +8051,7 @@ importers:
         version: 3.0.2
       run-script-os:
         specifier: ^1.1.6
-        version: 1.1.6
+        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-data-index-postgresql-image:
     devDependencies:
@@ -8090,7 +8087,7 @@ importers:
         version: 3.0.2
       run-script-os:
         specifier: ^1.1.6
-        version: 1.1.6
+        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-db-migrator-tool-image:
     devDependencies:
@@ -8126,7 +8123,7 @@ importers:
         version: 3.0.2
       run-script-os:
         specifier: ^1.1.6
-        version: 1.1.6
+        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-images-modules:
     devDependencies:
@@ -8150,7 +8147,7 @@ importers:
         version: 3.0.2
       run-script-os:
         specifier: ^1.1.6
-        version: 1.1.6
+        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-jobs-service-ephemeral-image:
     devDependencies:
@@ -8186,7 +8183,7 @@ importers:
         version: 3.0.2
       run-script-os:
         specifier: ^1.1.6
-        version: 1.1.6
+        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-jobs-service-postgresql-image:
     devDependencies:
@@ -8222,7 +8219,7 @@ importers:
         version: 3.0.2
       run-script-os:
         specifier: ^1.1.6
-        version: 1.1.6
+        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-management-console-image:
     devDependencies:
@@ -8261,10 +8258,10 @@ importers:
         version: 3.0.2
       run-script-os:
         specifier: ^1.1.6
-        version: 1.1.6
+        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       ts-json-schema-generator:
         specifier: ^1.1.2
-        version: 1.1.2
+        version: 1.5.1
 
   packages/osl-operator-bundle-image:
     dependencies:
@@ -8322,7 +8319,7 @@ importers:
         version: 3.0.2
       run-script-os:
         specifier: ^1.1.6
-        version: 1.1.6
+        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-swf-builder-image:
     devDependencies:
@@ -8358,7 +8355,7 @@ importers:
         version: 3.0.2
       run-script-os:
         specifier: ^1.1.6
-        version: 1.1.6
+        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-swf-devmode-image:
     devDependencies:
@@ -8394,7 +8391,7 @@ importers:
         version: 3.0.2
       run-script-os:
         specifier: ^1.1.6
-        version: 1.1.6
+        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/patternfly-base:
     devDependencies:
@@ -8843,7 +8840,7 @@ importers:
         version: link:../python-venv
       run-script-os:
         specifier: ^1.1.6
-        version: 1.1.6
+        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/root-env: {}
 
@@ -30104,6 +30101,11 @@ packages:
       esbuild:
         optional: true
 
+  ts-json-schema-generator@1.5.1:
+    resolution: {integrity: sha512-apX5qG2+NA66j7b4AJm8q/DpdTeOsjfh7A3LpKsUiil0FepkNwtN28zYgjrsiiya2/OPhsr/PSjX5FUYg79rCg==}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+
   ts-json-schema-generator@2.5.0:
     resolution: {integrity: sha512-sYY7AInozRbtj9OD3ynJJuMDWZ5lGxzxTevtmH3W9Hnd2J2szBC0HdPqSyuIirXnQ6g8KDJxS/HENoypUwBrlg==}
     engines: {node: '>=22.0.0'}
@@ -30255,6 +30257,11 @@ packages:
 
   typedarray@0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
+
+  typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
 
   typescript@5.9.3:
     resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
@@ -51941,6 +51948,16 @@ snapshots:
       '@jest/types': 29.6.3
       babel-jest: 29.7.0(@babel/core@7.28.3)
 
+  ts-json-schema-generator@1.5.1:
+    dependencies:
+      '@types/json-schema': 7.0.15
+      commander: 12.1.0
+      glob: 8.1.0
+      json5: 2.2.3
+      normalize-path: 3.0.0
+      safe-stable-stringify: 2.5.0
+      typescript: 5.4.5
+
   ts-json-schema-generator@2.5.0:
     dependencies:
       '@types/json-schema': 7.0.15
@@ -52108,6 +52125,8 @@ snapshots:
       is-typedarray: 1.0.0
 
   typedarray@0.0.6: {}
+
+  typescript@5.4.5: {}
 
   typescript@5.9.3: {}
 

@@ -256,9 +256,6 @@
       { "id": "@kie-tools/serverless-workflow-jq-expressions" },
       { "id": "@kie-tools/serverless-workflow-service-catalog" },
       { "id": "swf-vscode-extension" },
-      { "id": "@kie-tools/sonataflow-management-console-image" },
-      { "id": "@kie-tools/sonataflow-management-console-image-env" },
-      { "id": "@kie-tools/sonataflow-management-console-webapp" },
       { "id": "@kie-tools/stunner-editors" },
       { "id": "@kie-tools/stunner-editors-dmn-loader" },
       { "id": "vscode-extension-dashbuilder-editor" },
@@ -2937,56 +2934,6 @@
       {
         "source": "swf-vscode-extension",
         "target": "@kie-tools/vscode-extension-common-test-helpers",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/sonataflow-management-console-image",
-        "target": "@kie-tools/image-env-to-json",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/sonataflow-management-console-image",
-        "target": "@kie-tools/sonataflow-image-common",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/sonataflow-management-console-image",
-        "target": "@kie-tools/sonataflow-management-console-image-env",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/sonataflow-management-console-image",
-        "target": "@kie-tools/sonataflow-management-console-webapp",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/sonataflow-management-console-image-env",
-        "target": "@kie-tools/root-env",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/sonataflow-management-console-webapp",
-        "target": "@kie-tools/runtime-tools-process-webapp-components",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/sonataflow-management-console-webapp",
-        "target": "@kie-tools/runtime-tools-shared-enveloped-components",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/sonataflow-management-console-webapp",
-        "target": "@kie-tools/runtime-tools-shared-webapp-components",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/sonataflow-management-console-webapp",
-        "target": "@kie-tools/runtime-tools-swf-webapp-components",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/sonataflow-management-console-webapp",
-        "target": "@kie-tools/sonataflow-dev-app",
         "weight": 1
       },
       {
