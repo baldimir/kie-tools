@@ -1,0 +1,6 @@
+{"id":"19b5818f-8733-45d2-ae3a-1513a123b061","ts":"2026-04-21T12:06:00.445Z","path":"/Users/tiborzimanyi/IdeaProjects/kie-tools/repo/build-dependencies-versions.json","version":"1.0.0","taskID":"e21c2fdd-822b-4a03-98cc-d663f39a0901"}
+{"id":"24a543ed-cf9d-41b6-8787-f289b2390de9","ts":"2026-04-21T12:06:49.512Z","path":"/Users/tiborzimanyi/IdeaProjects/kie-tools/.ci/incubator-kie-tools-ci-build.Dockerfile","version":"1.0.0","taskID":"e21c2fdd-822b-4a03-98cc-d663f39a0901"}
+{"id":"60753a57-af10-4d63-9f91-6002b7b4ff1e","ts":"2026-04-21T12:07:26.983Z","path":"/Users/tiborzimanyi/IdeaProjects/kie-tools/.github/actions/setup-env/action.yml","version":"1.0.0","taskID":"e21c2fdd-822b-4a03-98cc-d663f39a0901"}
+{"id":"c33e416c-94dc-4982-a640-e397907642ed","ts":"2026-04-21T12:07:56.203Z","path":"/Users/tiborzimanyi/IdeaProjects/kie-tools/README.md","version":"1.0.0","taskID":"e21c2fdd-822b-4a03-98cc-d663f39a0901"}
+{"id":"ebf5318e-7121-4069-a015-cc3914b7bdbd","ts":"2026-04-21T12:08:08.328Z","path":"/Users/tiborzimanyi/IdeaProjects/kie-tools/devbox.json","version":"1.0.0","taskID":"e21c2fdd-822b-4a03-98cc-d663f39a0901"}
+{"id":"0b6242ca-a61c-4fda-a579-0a2ac7920404","ts":"2026-04-21T12:08:34.492Z","path":"/Users/tiborzimanyi/IdeaProjects/kie-tools/packages/kn-plugin-workflow/README.md","version":"1.0.0","taskID":"e21c2fdd-822b-4a03-98cc-d663f39a0901"}
