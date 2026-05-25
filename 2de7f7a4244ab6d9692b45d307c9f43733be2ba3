@@ -1,0 +1,4 @@
+{"id":"eee90a06-45f8-4a85-a372-d6c3d356c8ff","ts":"2026-05-25T13:57:17.651Z","path":"/Users/tiborzimanyi/IdeaProjects/kie-tools/.github/workflows/ci_check_dependencies_consistency.yaml","version":"1.0.0","taskID":"2ea4a661-8b50-47bb-b500-8b9318ee7acf"}
+{"id":"ebdaf2b4-a205-4579-afc8-3e8d5d75d272","ts":"2026-05-25T13:57:28.329Z","path":"/Users/tiborzimanyi/IdeaProjects/kie-tools/.github/workflows/ci_check_code_formatting.yml","version":"1.0.0","taskID":"2ea4a661-8b50-47bb-b500-8b9318ee7acf"}
+{"id":"75fcef48-61c8-4e82-9a09-e578168361da","ts":"2026-05-25T13:57:46.984Z","path":"/Users/tiborzimanyi/IdeaProjects/kie-tools/.github/workflows/ci_build.yml","version":"1.0.0","taskID":"2ea4a661-8b50-47bb-b500-8b9318ee7acf"}
+{"id":"80efe02d-9e26-411f-819a-3a2ebd7b1f07","ts":"2026-05-25T13:58:25.443Z","path":"/Users/tiborzimanyi/IdeaProjects/kie-tools/.github/workflows/ci_build.yml","version":"1.0.0","taskID":"2ea4a661-8b50-47bb-b500-8b9318ee7acf"}
