@@ -40,7 +40,6 @@
         <module>dev-deployment-base-image</module>
         <module>jbpm-quarkus-devui</module>
         <module>vscode-java-code-completion-extension-plugin</module>
-        <module>serverless-logic-web-tools-swf-deployment-quarkus-app</module>
         <module>sonataflow-quarkus-devui</module>
         <module>sonataflow-management-console-webapp</module>
         <module>kogito-db-migrator-tool</module>
