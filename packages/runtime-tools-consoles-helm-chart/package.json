@@ -28,10 +28,10 @@
     "@kie-tools/kogito-management-console": "workspace:*"
   },
   "devDependencies": {
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools/root-env": "workspace:*",
     "prettier": "^3.3.2",
     "rimraf": "^3.0.2",
-    "run-script-os": "^1.1.6",
     "yaml": "^2.8.3"
   },
   "kieTools": {

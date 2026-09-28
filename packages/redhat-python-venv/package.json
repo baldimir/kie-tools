@@ -12,7 +12,7 @@
     "install:win32": ".\\venv\\Scripts\\Activate.bat && pnpm install:pip"
   },
   "devDependencies": {
-    "@kie-tools/python-venv": "workspace:*",
-    "run-script-os": "^1.1.6"
+    "@kie-tools-scripts/run-script-os": "workspace:*",
+    "@kie-tools/python-venv": "workspace:*"
   }
 }

@@ -33,9 +33,9 @@
     "@kie-tools/maven-base": "workspace:*"
   },
   "devDependencies": {
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools/root-env": "workspace:*",
-    "@kie-tools/runtime-tools-process-dev-ui-webapp": "workspace:*",
-    "run-script-os": "^1.1.6"
+    "@kie-tools/runtime-tools-process-dev-ui-webapp": "workspace:*"
   },
   "kieTools": {
     "requiredPreinstalledCliCommands": [

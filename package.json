@@ -23,6 +23,7 @@
     "@kie-tools-scripts/build-env": "workspace:*",
     "@kie-tools-scripts/check-junit-report-results": "workspace:*",
     "@kie-tools-scripts/run-script-if": "workspace:*",
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools-scripts/sparse-checkout": "workspace:*",
     "@kie-tools-scripts/update-kogito-version": "workspace:*",
     "@kie-tools-scripts/update-stream-name": "workspace:*",

@@ -429,8 +429,8 @@ packages/yard-validator-worker/yard-validator-worker.iml
 packages/yard-vscode-extension/.vscodeignore
 packages/yard-vscode-extension/e2e-tests/resources/empty.yard.yaml
 packages/yard-vscode-extension/e2e-tests/resources/empty.yard.yml
-patches/run-script-os@1.1.6.patch
 patches/zustand@4.4.2.patch
+scripts/run-script-os/LICENSE
 pnpm-lock.yaml
 pnpm-workspace.yaml
 repo/graph.dot

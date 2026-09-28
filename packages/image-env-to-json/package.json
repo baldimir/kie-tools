@@ -33,9 +33,9 @@
     "test": "go test ./..."
   },
   "devDependencies": {
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools/root-env": "workspace:*",
     "cross-env": "^7.0.3",
-    "rimraf": "^3.0.2",
-    "run-script-os": "^1.1.6"
+    "rimraf": "^3.0.2"
   }
 }

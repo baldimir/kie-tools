@@ -25,8 +25,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@kie-tools/root-env": "workspace:*",
-    "run-script-os": "^1.1.6"
+    "@kie-tools-scripts/run-script-os": "workspace:*",
+    "@kie-tools/root-env": "workspace:*"
   },
   "kieTools": {
     "requiredPreinstalledCliCommands": [

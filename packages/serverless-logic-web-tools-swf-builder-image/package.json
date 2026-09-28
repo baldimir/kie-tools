@@ -30,6 +30,7 @@
     "powershell": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command"
   },
   "devDependencies": {
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools/maven-base": "workspace:*",
     "@kie-tools/maven-m2-repo-via-http-image": "workspace:*",
     "@kie-tools/root-env": "workspace:*",
@@ -38,7 +39,6 @@
     "@kie-tools/sonataflow-builder-image": "workspace:*",
     "cross-env": "^7.0.3",
     "rimraf": "^3.0.2",
-    "run-script-os": "^1.1.6",
     "sonataflow-deployment-webapp": "workspace:*"
   }
 }

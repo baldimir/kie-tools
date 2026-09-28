@@ -22,10 +22,10 @@
     "docker:build": "kie-tools--image-builder build -r \"$(build-env corsProxyImage.image.registry)\" -a \"$(build-env corsProxyImage.image.account)\" -n \"$(build-env corsProxyImage.image.name)\" -t \"$(build-env corsProxyImage.image.buildTag)\" --build-arg \"CORS_PROXY_DEFAULT_PORT=$(build-env corsProxyImage.image.port)\" --build-arg \"CORS_PROXY_DEFAULT_ALLOWED_ORIGINS=$(build-env corsProxyImage.image.allowedOrigins)\" --build-arg \"CORS_PROXY_DEFAULT_VERBOSE=$(build-env corsProxyImage.image.verbose)\" --build-arg \"CORS_PROXY_DEFAULT_ALLOW_HOSTS=$(build-env corsProxyImage.image.allowedHosts)\""
   },
   "devDependencies": {
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools/cors-proxy": "workspace:*",
     "@kie-tools/image-builder": "workspace:*",
     "@kie-tools/root-env": "workspace:*",
-    "rimraf": "^3.0.2",
-    "run-script-os": "^1.1.6"
+    "rimraf": "^3.0.2"
   }
 }

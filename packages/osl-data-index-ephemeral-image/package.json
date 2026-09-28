@@ -30,6 +30,7 @@
     "setup:env": ". ./node_modules/@osl/redhat-python-venv/venv/bin/activate && cross-env KOGITO_IMAGE_REGISTRY=$(build-env oslDataIndexEphemeralImage.registry) KOGITO_IMAGE_REGISTRY_ACCOUNT=$(build-env oslDataIndexEphemeralImage.account) KOGITO_IMAGE_NAME=$(build-env oslDataIndexEphemeralImage.name) KOGITO_IMAGE_TAG=$(build-env oslDataIndexEphemeralImage.buildTag) QUARKUS_PLATFORM_GROUPID=$(build-env kogitoImagesCekitModules.quarkusGroupId) QUARKUS_PLATFORM_VERSION=$(build-env versions.quarkus) KOGITO_VERSION=$(build-env versions.kogito)"
   },
   "devDependencies": {
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools/maven-base": "workspace:*",
     "@kie-tools/root-env": "workspace:*",
     "@kie-tools/sonataflow-image-common": "workspace:*",
@@ -39,8 +40,7 @@
     "@osl/redhat-python-venv": "workspace:*",
     "cross-env": "^7.0.3",
     "replace-in-file": "^7.1.0",
-    "rimraf": "^3.0.2",
-    "run-script-os": "^1.1.6"
+    "rimraf": "^3.0.2"
   },
   "kieTools": {
     "requiredPreinstalledCliCommands": [

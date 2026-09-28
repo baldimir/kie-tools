@@ -19,8 +19,8 @@
     "image:docker:build": "kie-tools--image-builder build -r \"$(build-env mavenM2RepoViaHttpImage.registry)\" -a \"$(build-env mavenM2RepoViaHttpImage.account)\" -n \"$(build-env mavenM2RepoViaHttpImage.name)\" -t \"$(build-env mavenM2RepoViaHttpImage.buildTag)\""
   },
   "devDependencies": {
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools/image-builder": "workspace:*",
-    "@kie-tools/root-env": "workspace:*",
-    "run-script-os": "^1.1.6"
+    "@kie-tools/root-env": "workspace:*"
   }
 }

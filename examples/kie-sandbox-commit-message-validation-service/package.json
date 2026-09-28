@@ -27,9 +27,9 @@
     "start": "make start"
   },
   "devDependencies": {
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools/root-env": "workspace:*",
-    "cross-env": "^7.0.3",
-    "run-script-os": "^1.1.6"
+    "cross-env": "^7.0.3"
   },
   "kieTools": {
     "requiredPreinstalledCliCommands": [

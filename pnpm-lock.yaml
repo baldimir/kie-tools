@@ -34,9 +34,6 @@ overrides:
 packageExtensionsChecksum: sha256-oxPwESKKSHRelJQnCQTHzgtG1xkcQOHjfgjFdIfqMfg=
 
 patchedDependencies:
-  run-script-os@1.1.6:
-    hash: 82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753
-    path: patches/run-script-os@1.1.6.patch
   zustand@4.4.2:
     hash: 5c5bf0e87d873c263d03537e4be9624274aa0d3a87a7d907599335802ca0d236
     path: patches/zustand@4.4.2.patch
@@ -57,6 +54,9 @@ importers:
       '@kie-tools-scripts/run-script-if':
         specifier: workspace:*
         version: link:scripts/run-script-if
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:scripts/run-script-os
       '@kie-tools-scripts/sparse-checkout':
         specifier: workspace:*
         version: link:scripts/sparse-checkout
@@ -90,15 +90,15 @@ importers:
 
   examples/kie-sandbox-commit-message-validation-service:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../../packages/root-env
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   examples/serverless-workflow-editor-standalone-on-webapp:
     devDependencies:
@@ -178,12 +178,12 @@ importers:
         specifier: workspace:*
         version: link:../../packages/sonataflow-quarkus-devui
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../../packages/root-env
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   examples/uniforms-patternfly:
     dependencies:
@@ -279,6 +279,9 @@ importers:
         specifier: ^1.16.2
         version: 1.16.2
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/eslint':
         specifier: workspace:*
         version: link:../eslint
@@ -318,9 +321,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       ts-jest:
         specifier: ^29.1.5
         version: 29.1.5(@babel/core@7.29.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.29.7))(jest@29.7.0(@types/node@24.10.11)(node-notifier@8.0.2)(ts-node@10.9.2(@swc/core@1.3.92)(@types/node@24.10.11)(typescript@5.9.3)))(typescript@5.9.3)
@@ -605,6 +605,9 @@ importers:
       '@kie-tools-core/webpack-base':
         specifier: workspace:*
         version: link:../webpack-base
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/cors-proxy-api':
         specifier: workspace:*
         version: link:../cors-proxy-api
@@ -647,9 +650,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       ts-jest:
         specifier: ^29.1.5
         version: 29.1.5(@babel/core@7.29.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.29.7))(jest@29.7.0(@types/node@24.10.11)(node-notifier@8.0.2)(ts-node@10.9.2(@swc/core@1.3.92)(@types/node@24.10.11)(typescript@5.9.3)))(typescript@5.9.3)
@@ -692,6 +692,9 @@ importers:
 
   packages/cors-proxy-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/cors-proxy':
         specifier: workspace:*
         version: link:../cors-proxy
@@ -704,9 +707,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/dev-deployment-base-image:
     dependencies:
@@ -714,6 +714,9 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/dev-deployment-upload-service':
         specifier: workspace:*
         version: link:../dev-deployment-upload-service
@@ -726,12 +729,12 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/dev-deployment-upload-service:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/jest-base':
         specifier: workspace:*
         version: link:../jest-base
@@ -753,9 +756,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       ts-jest:
         specifier: ^29.1.5
         version: 29.1.5(@babel/core@7.29.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.29.7))(jest@29.7.0(@types/node@26.1.1)(node-notifier@8.0.2)(ts-node@10.9.2(@swc/core@1.3.92)(@types/node@26.1.1)(typescript@5.9.3)))(typescript@5.9.3)
@@ -1039,6 +1039,9 @@ importers:
 
   packages/form-code-generator:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/eslint':
         specifier: workspace:*
         version: link:../eslint
@@ -1078,9 +1081,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       ts-jest:
         specifier: ^29.1.5
         version: 29.1.5(@babel/core@7.29.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.29.7))(jest@29.7.0(@types/node@26.1.1)(node-notifier@8.0.2)(ts-node@10.9.2(@swc/core@1.3.92)(@types/node@26.1.1)(typescript@5.9.3)))(typescript@5.9.3)
@@ -1486,6 +1486,9 @@ importers:
         specifier: ^17.7.2
         version: 17.7.2
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -1495,15 +1498,15 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
 
   packages/image-env-to-json:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
@@ -1513,9 +1516,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/import-java-classes-component:
     dependencies:
@@ -1662,6 +1662,9 @@ importers:
         specifier: ^3.10.2
         version: 3.10.2(react@17.0.2)
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/eslint':
         specifier: workspace:*
         version: link:../eslint
@@ -1701,9 +1704,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       ts-jest:
         specifier: ^29.1.5
         version: 29.1.5(@babel/core@7.29.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.29.7))(jest@29.7.0(@types/node@26.1.1)(node-notifier@8.0.2)(ts-node@10.9.2(@swc/core@1.3.92)(@types/node@26.1.1)(typescript@5.9.3)))(typescript@5.9.3)
@@ -1717,15 +1717,15 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
       '@kie-tools/runtime-tools-process-dev-ui-webapp':
         specifier: workspace:*
         version: link:../runtime-tools-process-dev-ui-webapp
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/jest-base:
     devDependencies:
@@ -2116,6 +2116,9 @@ importers:
         specifier: workspace:*
         version: link:../sonataflow-quarkus-devui
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
@@ -2134,12 +2137,12 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/kogito-base-builder-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/python-venv':
         specifier: workspace:*
         version: link:../python-venv
@@ -2161,9 +2164,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/kogito-data-index-ephemeral-image:
     dependencies:
@@ -2171,6 +2171,9 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/python-venv':
         specifier: workspace:*
         version: link:../python-venv
@@ -2192,9 +2195,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/kogito-data-index-postgresql-image:
     dependencies:
@@ -2202,6 +2202,9 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/python-venv':
         specifier: workspace:*
         version: link:../python-venv
@@ -2223,9 +2226,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/kogito-data-index-webapp:
     devDependencies:
@@ -2269,15 +2269,15 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/kogito-db-migrator-tool-image:
     dependencies:
@@ -2288,6 +2288,9 @@ importers:
         specifier: workspace:*
         version: link:../sonataflow-image-common
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/python-venv':
         specifier: workspace:*
         version: link:../python-venv
@@ -2306,9 +2309,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/kogito-images-install-helper:
     dependencies:
@@ -2334,6 +2334,9 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/python-venv':
         specifier: workspace:*
         version: link:../python-venv
@@ -2355,9 +2358,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/kogito-jobs-service-postgresql-image:
     dependencies:
@@ -2365,6 +2365,9 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/python-venv':
         specifier: workspace:*
         version: link:../python-venv
@@ -2386,9 +2389,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/kogito-jobs-service-webapp:
     devDependencies:
@@ -2428,6 +2428,9 @@ importers:
 
   packages/kogito-management-console:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/image-builder':
         specifier: workspace:*
         version: link:../image-builder
@@ -2443,9 +2446,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       ts-json-schema-generator:
         specifier: ^2.5.0
         version: 2.5.0
@@ -2495,24 +2495,24 @@ importers:
 
   packages/maven-base:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/maven-m2-repo-via-http-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/image-builder':
         specifier: workspace:*
         version: link:../image-builder
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/monaco-editor:
     dependencies:
@@ -2635,6 +2635,9 @@ importers:
 
   packages/osl-data-index-ephemeral-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/maven-base':
         specifier: workspace:*
         version: link:../maven-base
@@ -2665,12 +2668,12 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-data-index-postgresql-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/maven-base':
         specifier: workspace:*
         version: link:../maven-base
@@ -2701,12 +2704,12 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-db-migrator-tool-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/kogito-db-migrator-tool-image':
         specifier: workspace:*
         version: link:../kogito-db-migrator-tool-image
@@ -2737,12 +2740,12 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-images-modules:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
@@ -2761,12 +2764,12 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-jobs-service-ephemeral-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/maven-base':
         specifier: workspace:*
         version: link:../maven-base
@@ -2797,12 +2800,12 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-jobs-service-postgresql-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/maven-base':
         specifier: workspace:*
         version: link:../maven-base
@@ -2833,12 +2836,12 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-management-console-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/image-env-to-json':
         specifier: workspace:*
         version: link:../image-env-to-json
@@ -2872,9 +2875,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       ts-json-schema-generator:
         specifier: ^2.5.0
         version: 2.5.0
@@ -2924,6 +2924,9 @@ importers:
         specifier: workspace:*
         version: link:../redhat-python-venv
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       cross-env:
         specifier: ^7.0.3
         version: 7.0.3
@@ -2933,12 +2936,12 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-swf-builder-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/maven-base':
         specifier: workspace:*
         version: link:../maven-base
@@ -2969,12 +2972,12 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/osl-swf-devmode-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/maven-base':
         specifier: workspace:*
         version: link:../maven-base
@@ -3005,9 +3008,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/patternfly-base:
     devDependencies:
@@ -3051,6 +3051,9 @@ importers:
       '@kie-tools-scripts/run-script-if':
         specifier: workspace:*
         version: link:../../scripts/run-script-if
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
@@ -3066,18 +3069,15 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
 
   packages/python-venv:
     devDependencies:
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
 
   packages/react-hooks:
     dependencies:
@@ -3121,12 +3121,12 @@ importers:
 
   packages/redhat-python-venv:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/python-venv':
         specifier: workspace:*
         version: link:../python-venv
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/root-env: {}
 
@@ -3251,6 +3251,9 @@ importers:
         specifier: workspace:*
         version: link:../kogito-management-console
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
@@ -3260,9 +3263,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       yaml:
         specifier: ^2.8.3
         version: 2.8.3
@@ -4969,6 +4969,9 @@ importers:
 
   packages/serverless-logic-web-tools-base-builder-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
@@ -4981,9 +4984,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/serverless-logic-web-tools-base-builder-image-env:
     devDependencies:
@@ -4993,6 +4993,9 @@ importers:
 
   packages/serverless-logic-web-tools-swf-builder-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/maven-base':
         specifier: workspace:*
         version: link:../maven-base
@@ -5017,9 +5020,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       sonataflow-deployment-webapp:
         specifier: workspace:*
         version: link:../sonataflow-deployment-webapp
@@ -5039,15 +5039,18 @@ importers:
         specifier: workspace:*
         version: link:../sonataflow-quarkus-devui
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/serverless-logic-web-tools-swf-dev-mode-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/image-builder':
         specifier: workspace:*
         version: link:../image-builder
@@ -5075,9 +5078,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       sonataflow-deployment-webapp:
         specifier: workspace:*
         version: link:../sonataflow-deployment-webapp
@@ -5435,6 +5435,9 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
@@ -5444,9 +5447,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       symlink-dir:
         specifier: ^5.0.1
         version: 5.0.1
@@ -5611,6 +5611,9 @@ importers:
       '@kie-tools-core/webpack-base':
         specifier: workspace:*
         version: link:../webpack-base
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/eslint':
         specifier: workspace:*
         version: link:../eslint
@@ -5710,9 +5713,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       start-server-and-test:
         specifier: ^2.0.3
         version: 2.0.3
@@ -6001,6 +6001,9 @@ importers:
       '@kie-tools-core/workspace':
         specifier: workspace:*
         version: link:../workspace
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/eslint':
         specifier: workspace:*
         version: link:../eslint
@@ -6100,9 +6103,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       start-server-and-test:
         specifier: ^2.0.3
         version: 2.0.3
@@ -6421,6 +6421,9 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/image-builder':
         specifier: workspace:*
         version: link:../image-builder
@@ -6448,9 +6451,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/sonataflow-deployment-webapp:
     dependencies:
@@ -6662,6 +6662,9 @@ importers:
 
   packages/sonataflow-devmode-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/image-builder':
         specifier: workspace:*
         version: link:../image-builder
@@ -6695,9 +6698,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/sonataflow-image-common:
     dependencies:
@@ -6708,6 +6708,9 @@ importers:
         specifier: workspace:*
         version: link:../kogito-jobs-service-webapp
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/python-venv':
         specifier: workspace:*
         version: link:../python-venv
@@ -6717,12 +6720,12 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/sonataflow-management-console-image:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/image-env-to-json':
         specifier: workspace:*
         version: link:../image-env-to-json
@@ -6753,9 +6756,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       start-server-and-test:
         specifier: ^2.0.3
         version: 2.0.3
@@ -7033,6 +7033,9 @@ importers:
 
   packages/sonataflow-operator:
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/kogito-db-migrator-tool-image':
         specifier: workspace:*
         version: link:../kogito-db-migrator-tool-image
@@ -7066,9 +7069,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/sonataflow-quarkus-devui:
     dependencies:
@@ -7076,15 +7076,15 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
       '@kie-tools/serverless-workflow-dev-ui-webapp':
         specifier: workspace:*
         version: link:../serverless-workflow-dev-ui-webapp
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/sonataflow-uniforms:
     dependencies:
@@ -7657,12 +7657,12 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/webpack-base:
     devDependencies:
@@ -7909,6 +7909,9 @@ importers:
         specifier: ^4.18.1
         version: 4.18.1
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/eslint':
         specifier: workspace:*
         version: link:../eslint
@@ -7930,9 +7933,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -7988,6 +7988,9 @@ importers:
       '@kie-tools-core/i18n':
         specifier: workspace:*
         version: link:../i18n
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/eslint':
         specifier: workspace:*
         version: link:../eslint
@@ -8024,9 +8027,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       start-server-and-test:
         specifier: ^2.0.3
         version: 2.0.3
@@ -8313,6 +8313,9 @@ importers:
         specifier: workspace:*
         version: link:../maven-base
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
@@ -8322,9 +8325,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       webpack:
         specifier: ^5.104.1
         version: 5.104.1
@@ -8335,6 +8335,9 @@ importers:
         specifier: workspace:*
         version: link:../notifications
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/eslint':
         specifier: workspace:*
         version: link:../eslint
@@ -8353,9 +8356,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -8369,6 +8369,9 @@ importers:
         specifier: workspace:*
         version: link:../yard-model
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../../scripts/run-script-os
       '@kie-tools/root-env':
         specifier: workspace:*
         version: link:../root-env
@@ -8378,9 +8381,6 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
 
   packages/yard-vscode-extension:
     dependencies:
@@ -8585,6 +8585,9 @@ importers:
         specifier: ^17.7.2
         version: 17.7.2
     devDependencies:
+      '@kie-tools-scripts/run-script-os':
+        specifier: workspace:*
+        version: link:../run-script-os
       '@kie-tools/tsconfig':
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -8594,12 +8597,11 @@ importers:
       rimraf:
         specifier: ^3.0.2
         version: 3.0.2
-      run-script-os:
-        specifier: ^1.1.6
-        version: 1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
+
+  scripts/run-script-os: {}
 
   scripts/sparse-checkout:
     devDependencies:
@@ -19778,10 +19780,6 @@ packages:
 
   run-parallel@1.1.9:
     resolution: {integrity: sha512-DEqnSRTDw/Tc3FXf49zedI638Z9onwUotBMiUFKmrO2sdFKIbXamXGQ3Axd4qgphxKB4kw/qP1w5kTxnfU1B9Q==}
-
-  run-script-os@1.1.6:
-    resolution: {integrity: sha512-ql6P2LzhBTTDfzKts+Qo4H94VUKpxKDFz6QxxwaUZN0mwvi7L3lpOI7BqPCq7lgDh3XLl0dpeXwfcVIitlrYrw==}
-    hasBin: true
 
   rxjs@7.8.2:
     resolution: {integrity: sha512-dhKf903U/PQZY6boNNtAGdWbG85WAbjT/1xYoZIC7FAY0yWapOBQVsVrDl58W86//e1VpMNBtRV4MaXfdMySFA==}
@@ -36823,8 +36821,6 @@ snapshots:
       p-limit: 3.1.0
 
   run-parallel@1.1.9: {}
-
-  run-script-os@1.1.6(patch_hash=82e28a047ef68998aa768f2d01885d4c96b061f05645c133026c22738f9a8753): {}
 
   rxjs@7.8.2:
     dependencies:

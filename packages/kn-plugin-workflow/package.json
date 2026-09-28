@@ -54,13 +54,13 @@
     "@kie-tools/sonataflow-quarkus-devui": "workspace:*"
   },
   "devDependencies": {
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools/root-env": "workspace:*",
     "@kie-tools/sonataflow-builder-image": "workspace:*",
     "@kie-tools/sonataflow-devmode-image": "workspace:*",
     "@kie-tools/sonataflow-operator": "workspace:*",
     "cross-env": "^7.0.3",
-    "rimraf": "^3.0.2",
-    "run-script-os": "^1.1.6"
+    "rimraf": "^3.0.2"
   },
   "kieTools": {
     "requiredPreinstalledCliCommands": [

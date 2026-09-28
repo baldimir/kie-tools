@@ -37,6 +37,7 @@
     "setup:env": ". ./node_modules/@kie-tools/python-venv/venv/bin/activate && cross-env BEHAVE_TIMEOUT=240 KOGITO_IMAGE_REGISTRY=$(build-env sonataflowDevModeImage.registry) KOGITO_IMAGE_REGISTRY_ACCOUNT=$(build-env sonataflowDevModeImage.account) KOGITO_IMAGE_NAME=$(build-env sonataflowDevModeImage.name) KOGITO_IMAGE_TAG=$(build-env sonataflowDevModeImage.buildTag) QUARKUS_PLATFORM_GROUPID=$(build-env kogitoImagesCekitModules.quarkusGroupId) QUARKUS_PLATFORM_VERSION=$(build-env versions.quarkus) KOGITO_VERSION=$(build-env versions.kogito) SONATAFLOW_QUARKUS_DEVUI_VERSION=$(build-env sonataflowDevModeImage.sonataflowQuarkusDevUiVersion)"
   },
   "devDependencies": {
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools/image-builder": "workspace:*",
     "@kie-tools/maven-base": "workspace:*",
     "@kie-tools/maven-m2-repo-via-http-image": "workspace:*",
@@ -47,8 +48,7 @@
     "@kie/kogito-images-install-helper": "workspace:*",
     "cross-env": "^7.0.3",
     "replace-in-file": "^7.1.0",
-    "rimraf": "^3.0.2",
-    "run-script-os": "^1.1.6"
+    "rimraf": "^3.0.2"
   },
   "kieTools": {
     "requiredPreinstalledCliCommands": [

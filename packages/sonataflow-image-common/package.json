@@ -33,10 +33,10 @@
     "@kie-tools/kogito-jobs-service-webapp": "workspace:*"
   },
   "devDependencies": {
+    "@kie-tools-scripts/run-script-os": "workspace:*",
     "@kie-tools/python-venv": "workspace:*",
     "@kie-tools/root-env": "workspace:*",
-    "rimraf": "^3.0.2",
-    "run-script-os": "^1.1.6"
+    "rimraf": "^3.0.2"
   },
   "kieTools": {
     "requiredPreinstalledCliCommands": [
