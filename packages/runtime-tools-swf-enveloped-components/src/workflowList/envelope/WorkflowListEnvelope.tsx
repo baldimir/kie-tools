@@ -18,7 +18,7 @@
  */
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { EnvelopeBus } from "@kie-tools-core/envelope-bus/dist/api";
 import { WorkflowListChannelApi, WorkflowListEnvelopeApi } from "../api";
 import { Envelope, EnvelopeDivConfig } from "@kie-tools-core/envelope";
@@ -46,11 +46,11 @@ export function init(args: { config: EnvelopeDivConfig; container: HTMLDivElemen
   >(args.bus, args.config);
 
   const envelopeViewDelegate = async () => {
-    const ref = React.createRef<WorkflowListEnvelopeViewApi>();
     return new Promise<() => WorkflowListEnvelopeViewApi>((res) => {
-      ReactDOM.render(<WorkflowListEnvelopeView ref={ref} channelApi={envelope.channelApi} />, args.container, () =>
-        res(() => ref.current!)
-      );
+      const setRef = (ref: WorkflowListEnvelopeViewApi | null) => {
+        if (ref) res(() => ref);
+      };
+      createRoot(args.container).render(<WorkflowListEnvelopeView ref={setRef} channelApi={envelope.channelApi} />);
     });
   };
 

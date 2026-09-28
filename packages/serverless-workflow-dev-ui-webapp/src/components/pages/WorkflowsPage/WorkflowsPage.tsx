@@ -29,7 +29,7 @@ import { WorkflowListContainer } from "@kie-tools/runtime-tools-swf-webapp-compo
 import { Card } from "@patternfly/react-core/dist/js/components/Card";
 import { PageSection } from "@patternfly/react-core/dist/js/components/Page";
 import { Tab, Tabs, TabTitleText } from "@patternfly/react-core/dist/js/components/Tabs";
-import React, { ReactText, useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useDevUIAppContext } from "../../contexts/DevUIAppContext";
 import "../../styles.css";
@@ -45,7 +45,7 @@ const WorkflowsPage: React.FC<OUIAProps> = ({ ouiaId, ouiaSafe }) => {
   const location = useLocation();
   const gatewayApi: WorkflowListGatewayApi = useWorkflowListGatewayApi();
 
-  const [activeTabKey, setActiveTabKey] = useState<ReactText>(0);
+  const [activeTabKey, setActiveTabKey] = useState<string | number>(0);
 
   useEffect(() => {
     return ouiaPageTypeAndObjectId("workflow-instances");

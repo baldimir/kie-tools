@@ -18,7 +18,7 @@
  */
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { EnvelopeBus } from "@kie-tools-core/envelope-bus/dist/api";
 import { Envelope, EnvelopeDivConfig } from "@kie-tools-core/envelope";
 import { CloudEventFormChannelApi, CloudEventFormEnvelopeApi } from "../api";
@@ -52,12 +52,12 @@ export function init(args: { config: EnvelopeDivConfig; container: HTMLDivElemen
    * Returns a Promise<() => CloudEventFormEnvelopeViewApi> that can be used in CloudEventFormEnvelopeApiImpl.
    */
   const envelopeViewDelegate = async () => {
-    const ref = React.createRef<CloudEventFormEnvelopeViewApi>();
     return new Promise<() => CloudEventFormEnvelopeViewApi>((res) => {
       args.container.className = "kogito-cloud-event-form-container";
-      ReactDOM.render(<CloudEventFormEnvelopeView ref={ref} channelApi={envelope.channelApi} />, args.container, () =>
-        res(() => ref.current!)
-      );
+      const setRef = (ref: CloudEventFormEnvelopeViewApi | null) => {
+        if (ref) res(() => ref);
+      };
+      createRoot(args.container).render(<CloudEventFormEnvelopeView ref={setRef} channelApi={envelope.channelApi} />);
     });
   };
 

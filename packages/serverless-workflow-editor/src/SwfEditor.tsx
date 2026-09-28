@@ -21,10 +21,11 @@ import "@patternfly/react-core/dist/styles/base.css";
 import "reactflow/dist/style.css";
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from "react";
+import { flushSync } from "react-dom";
+import { createRoot } from "react-dom/client";
 import * as RF from "reactflow";
 import { ErrorBoundary, ErrorBoundaryPropsWithFallback } from "react-error-boundary";
-import { useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from "react";
 import { original } from "immer";
 import { Diagram, DiagramRef } from "./diagram/Diagram";
 import { SwfEditorContextProvider, useSwfEditor } from "./SwfEditorContext";
@@ -122,15 +123,14 @@ export const SwfEditorInternal = ({
         svg.setAttribute("width", bounds.width + SVG_PADDING * 2 + "");
         svg.setAttribute("height", bounds.height + SVG_PADDING * 2 + "");
 
-        // We're still on React 17.
-        // eslint-disable-next-line react/no-deprecated
-        ReactDOM.render(
-          // Indepdent of where the nodes are located, they'll always be rendered at the top-left corner of the SVG
-          <g transform={`translate(${-bounds.x + SVG_PADDING} ${-bounds.y + SVG_PADDING})`}>
-            <SwfDiagramSvg nodes={nodes} edges={edges} snapGrid={state.diagram.snapGrid} thisSwf={state.swf} />
-          </g>,
-          svg
-        );
+        flushSync(() => {
+          createRoot(svg).render(
+            // Indepdent of where the nodes are located, they'll always be rendered at the top-left corner of the SVG
+            <g transform={`translate(${-bounds.x + SVG_PADDING} ${-bounds.y + SVG_PADDING})`}>
+              <SwfDiagramSvg nodes={nodes} edges={edges} snapGrid={state.diagram.snapGrid} thisSwf={state.swf} />
+            </g>
+          );
+        });
 
         return new XMLSerializer().serializeToString(svg);
       },

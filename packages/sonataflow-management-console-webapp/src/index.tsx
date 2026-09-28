@@ -17,7 +17,7 @@
  * under the License.
  */
 import * as React from "react";
-import * as ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import ApolloClient from "apollo-client";
 import "@patternfly/patternfly/patternfly.css";
 import "@patternfly/patternfly/patternfly-addons.css";
@@ -45,7 +45,7 @@ import { DATA_INDEX_ENDPOINT } from "./AppConstants";
 window["DATA_INDEX_ENDPOINT"] = DATA_INDEX_ENDPOINT;
 
 const onLoadFailure = (): void => {
-  ReactDOM.render(<KeycloakUnavailablePage />, document.getElementById("root"));
+  createRoot(document.getElementById("root")!).render(<KeycloakUnavailablePage />);
 };
 
 const appRender = async (ctx: UserContext) => {
@@ -54,12 +54,10 @@ const appRender = async (ctx: UserContext) => {
   });
   const fallbackUI = onError(({ networkError }: any) => {
     if (networkError && networkError.stack === "TypeError: Failed to fetch") {
-      // eslint-disable-next-line react/no-render-return-value
-      return ReactDOM.render(
+      return createRoot(document.getElementById("root")!).render(
         <ManagementConsole apolloClient={client} userContext={ctx}>
           <ServerUnavailablePage displayName={"Management Console"} reload={() => window.location.reload()} />
-        </ManagementConsole>,
-        document.getElementById("root")
+        </ManagementConsole>
       );
     }
   });
@@ -92,11 +90,10 @@ const appRender = async (ctx: UserContext) => {
     cache,
     link: setGQLContext.concat(fallbackUI.concat(httpLink)),
   });
-  ReactDOM.render(
+  createRoot(document.getElementById("root")!).render(
     <ManagementConsole apolloClient={client} userContext={ctx}>
       <ManagementConsoleRoutes />
-    </ManagementConsole>,
-    document.getElementById("root")
+    </ManagementConsole>
   );
 };
 
