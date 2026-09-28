@@ -4,7 +4,7 @@ packages:
   - "scripts/*"
 overrides:
   "immutable@^3": "^3.8.4"
-  "@apidevtools/json-schema-ref-parser>js-yaml": "^3.14.2"
+  "@apidevtools/swagger-parser>@apidevtools/json-schema-ref-parser": "^15.3.6"
   "@istanbuljs/load-nyc-config>js-yaml": "^3.14.2"
   "@rhoas/registry-instance-sdk>axios": ">=0.32.0"
   "fast-uri": "^3.1.7"
@@ -23,6 +23,7 @@ overrides:
   "minimatch@^9>brace-expansion": "^2.1.4"
   "minimatch@^10>brace-expansion": "^5.0.9"
   "openapi-types": "7.2.3"
+  "qs": "^6.16.0"
   "path-to-regexp@^0": "0.1.13"
   "react-dropzone": "^11.4.2"
   "superagent": "10.2.2"
