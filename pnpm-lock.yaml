@@ -66,6 +66,9 @@ importers:
       '@kie-tools-scripts/update-version':
         specifier: workspace:*
         version: link:scripts/update-version
+      '@nice-move/prettier-plugin-package-json':
+        specifier: ^0.8.0
+        version: 0.8.0(prettier@3.9.9)
       '@prettier/plugin-xml':
         specifier: ^3.4.1
         version: 3.4.2(prettier@3.9.9)
@@ -581,7 +584,7 @@ importers:
         specifier: ^2.8.5
         version: 2.8.6
       express:
-        specifier: ^4.22.2
+        specifier: ^4.22.1
         version: 4.22.3
       https-proxy-agent:
         specifier: ^7.0.6
@@ -3130,8 +3133,8 @@ importers:
   packages/runtime-tools-components:
     dependencies:
       '@apidevtools/json-schema-ref-parser':
-        specifier: ^15.3.6
-        version: 15.5.2(@types/json-schema@7.0.15)
+        specifier: ^13.0.5
+        version: 13.0.5
       '@kie-tools-core/editor':
         specifier: workspace:*
         version: link:../editor
@@ -3430,7 +3433,7 @@ importers:
         specifier: ^5.0.1
         version: 5.0.1(webpack@5.111.1)
       express:
-        specifier: ^4.22.2
+        specifier: ^4.22.1
         version: 4.22.3
       file-loader:
         specifier: ^6.2.0
@@ -3835,6 +3838,9 @@ importers:
       react-moment:
         specifier: 0.9.7
         version: 0.9.7(moment@2.31.0)(prop-types@15.8.1)(react@18.3.1)
+      react-pure-loaders:
+        specifier: ^3.0.1
+        version: 3.0.1(@emotion/core@11.0.0)(react@18.3.1)
       react-svg-pan-zoom:
         specifier: ^3.12.1
         version: 3.13.1
@@ -6630,7 +6636,7 @@ importers:
         specifier: ^2.8.5
         version: 2.8.6
       express:
-        specifier: ^4.22.2
+        specifier: ^4.22.1
         version: 4.22.3
       express-rate-limit:
         specifier: ^7.4.0
@@ -8600,6 +8606,10 @@ packages:
   '@adobe/css-tools@4.5.0':
     resolution: {integrity: sha512-6OzddxPio9UiWTCemp4N8cYLV2ZN1ncRnV1cVGtve7dhPOtRkleRyx32GQCYSwDYgaHU3USMm84tNsvKzRCa1Q==}
 
+  '@apidevtools/json-schema-ref-parser@13.0.5':
+    resolution: {integrity: sha512-xfh4xVJD62gG6spIc7lwxoWT+l16nZu1ELyU8FkjaP/oD2yP09EvLAU6KhtudN9aML2Khhs9pY6Slr7KGTES3w==}
+    engines: {node: '>= 16'}
+
   '@apidevtools/json-schema-ref-parser@15.5.2':
     resolution: {integrity: sha512-B+C9Ok0DF/rjANIUHgwcV5/d4C72MB7f2IbKFL8jDGcGq2qn3yr893s8vAn2kbhmyaelAin0JK8EKF9P1+y7aQ==}
     engines: {node: '>=20'}
@@ -10487,6 +10497,12 @@ packages:
 
   '@motionone/utils@10.18.0':
     resolution: {integrity: sha512-3XVF7sgyTSI2KWvTf6uLlBJ5iAgRgmvp3bpuOiQJvInd4nZ19ET8lX5unn30SlmRH7hXbBbH+Gxd0m0klJ3Xtw==}
+
+  '@nice-move/prettier-plugin-package-json@0.8.0':
+    resolution: {integrity: sha512-F0KjPZcLmBCVOIL2JBYq/hQ6oLh0UmiA4pJ7jzVr7PNSOnAv9hVSriRikLI9gIg0fgvyKq5VzN+Vmb7xCtIGnw==}
+    engines: {node: '>=20.0.0 || ^18.12.0'}
+    peerDependencies:
+      prettier: ^3.2.5
 
   '@noble/hashes@1.8.0':
     resolution: {integrity: sha512-jCs9ldd7NwzpgXDIf6P3+NrHh9/sD6CQdxHyjQI+h/6rDNo88ypBxxz45UDuZHz9r3tNz7N/VInSVoVdtXEI4A==}
@@ -21344,6 +21360,11 @@ snapshots:
 
   '@adobe/css-tools@4.5.0': {}
 
+  '@apidevtools/json-schema-ref-parser@13.0.5':
+    dependencies:
+      '@types/json-schema': 7.0.15
+      js-yaml: 4.3.2
+
   '@apidevtools/json-schema-ref-parser@15.5.2(@types/json-schema@7.0.15)':
     dependencies:
       '@types/json-schema': 7.0.15
@@ -23995,6 +24016,10 @@ snapshots:
       '@motionone/types': 10.17.1
       hey-listen: 1.0.8
       tslib: 2.4.0
+
+  '@nice-move/prettier-plugin-package-json@0.8.0(prettier@3.9.9)':
+    dependencies:
+      prettier: 3.9.9
 
   '@noble/hashes@1.8.0': {}
 
