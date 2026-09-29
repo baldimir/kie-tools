@@ -40,7 +40,7 @@ export function initCodeLenses(
         return;
       }
 
-      const monacoCodeLenses: monaco.languages.CodeLens[] = lsCodeLenses.map((c) => ({
+      const monacoCodeLenses: monaco.languages.CodeLens[] = lsCodeLenses.map((c: any) => ({
         command: c.command
           ? {
               id: commandIds[c.command.command as YardLanguageServiceCommandTypes],
