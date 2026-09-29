@@ -3201,7 +3201,7 @@ importers:
       react-moment:
         specifier: 0.9.7
         version: 0.9.7(moment@2.31.0)(prop-types@15.8.1)(react@18.3.1)
-      react-router-dom:
+      react-router:
         specifier: ^7.18.0
         version: 7.18.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       uniforms:
@@ -4250,7 +4250,7 @@ importers:
       react:
         specifier: '>=18.3.1 <19.0.0'
         version: 18.3.1
-      react-router-dom:
+      react-router:
         specifier: ^7.18.0
         version: 7.18.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
@@ -18945,13 +18945,6 @@ packages:
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
-
-  react-router-dom@7.18.4:
-    resolution: {integrity: sha512-yrfmJHIpDG7taCpqKjT1G5B6q3O2K+RN8/fgNf0lTjCwiPbQ0ei6vXX9ZjQR+7ld8Tr7Z5xmyMnZ8YJrphWQUw==}
-    engines: {node: '>=20.0.0'}
-    peerDependencies:
-      react: '>=18'
-      react-dom: '>=18'
 
   react-router@6.30.6:
     resolution: {integrity: sha512-5HfK7k5im7LTOB0EqCQmfvy4C13G92Ssj1VTmouTK3AJvyjKTnFuCV0vcMAD/JS+JC4DvDIBRrlAeJIFjh5VWg==}
@@ -34854,12 +34847,6 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-router: 6.30.6(react@18.3.1)
-
-  react-router-dom@7.18.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
-    dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-router: 7.18.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
   react-router@6.30.6(react@18.3.1):
     dependencies:
