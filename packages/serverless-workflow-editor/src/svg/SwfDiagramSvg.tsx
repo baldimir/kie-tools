@@ -82,7 +82,7 @@ export function SwfDiagramSvg({
 
       nodesById.set(node.id, node);
 
-      const { height, width, ...style } = node.style!;
+      const { height, width, x: _x, y: _y, ...style } = node.style!;
 
       //Name is mandatory
       const label = node.data!.swfObject!.name!;

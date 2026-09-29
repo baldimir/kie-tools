@@ -51,4 +51,5 @@ onlyBuiltDependencies:
   - "puppeteer"
 patchedDependencies:
   "run-script-os@1.1.6": "patches/run-script-os@1.1.6.patch"
+  "zustand@4.5.7": "patches/zustand@4.5.7.patch"
 minimumReleaseAge: 4320

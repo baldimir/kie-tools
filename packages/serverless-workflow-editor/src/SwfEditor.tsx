@@ -204,12 +204,16 @@ export const SwfEditor = React.forwardRef((props: SwfEditorProps, ref: React.Ref
   );
   const storeRef = React.useRef<StoreApiType>(store);
 
-  const resetState: ErrorBoundaryPropsWithFallback["onReset"] = useCallback(({ args }) => {
-    storeRef.current?.setState((state) => {
-      state.diagram = defaultStaticState().diagram;
-      state.swf.model = args[0];
-    });
-  }, []);
+  const resetState: ErrorBoundaryPropsWithFallback["onReset"] = useCallback(
+    (details: { reason: "imperative-api"; args: any[] } | { reason: "keys"; prev: any[]; next: any[] }) => {
+      const args = details.reason === "imperative-api" ? details.args : [];
+      storeRef.current?.setState((state) => {
+        state.diagram = defaultStaticState().diagram;
+        state.swf.model = args[0];
+      });
+    },
+    []
+  );
 
   return (
     <I18nDictionariesProvider
